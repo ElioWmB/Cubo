@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il tuo titolo</title>
+    <link rel="stylesheet" href="sitolo.css">
+</head>
+<body>
+
+<header>
+    <img src="logo.svg" alt="Logo">
+    <nav class="stroke">
+        <ul>
+            <li><a href="#">La nostra storia</a></li>
+            <li><a href="#">Dove siamo</a></li>
+            <li><a href="#">Prenota</a></li>
+        </ul>
+    </nav>
+    <div class="divider"></div>
+    <p class="motto">La qualità norvegese, il sapore della tradizione mediterranea</p>
+    <div class="divider"></div>
+</header>
+
+<section id="gallery">
+    <!-- Immagini verranno inserite dinamicamente qui -->
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Array delle immagini
+        const imagesArray = [
+            "image1.jpg",
+            "image5.jpg",
+            "image3.jpg",
+            "image4.jpg",
+            // Aggiungi altre immagini secondo necessità
+        ];
+
+        // Riferimento alla sezione della galleria
+        const gallerySection = document.getElementById("gallery");
+
+        // Popola dinamicamente la galleria con le immagini
+        imagesArray.forEach(image => {
+            const imgElement = document.createElement("img");
+            imgElement.src = "images/" + image; // Assicurati di avere una cartella "images" con le tue immagini
+            gallerySection.appendChild(imgElement);
+        });
+    });
+</script>
+</body>
+</html>

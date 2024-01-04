@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+    font-family: 'Bebas Neue', sans-serif;
+    padding: 0;
+    margin: 0;
+    background: #007A94;
+    display: flex;
+    height: 100vh;
+}
+header {
+    text-align: center;
+    padding: 20px;
+    width: 200px; /* Larghezza della sidebar */
+    min-width: 200px; /* Larghezza minima della sidebar */
+    background: #007A94; /* Colore di sfondo della sidebar */
+    position: fixed; /* Rende la sidebar fissa */
+    overflow-y: auto; /* Aggiungi la barra di scorrimento se necessario */
+}
+
+.header-divider {
+    height: 2px;
+    background-color: #ffffff;
+    margin: 20px 0;
+}
+
+.motto {
+    color: #ffffff;
+    font-size: 16px;
+    margin: 20px 0;
+    padding-top: 40%;
+}
+
+header img {
+    max-width: 80%; /* Larghezza massima del logo */
+    padding-top: 30%;
+    padding-bottom: 40%;
+}
+
+section {
+    flex: 1;
+    background: url(Pattern.png);
+    padding: 100px; /* Spazio interno alla sezione principale */
+    box-sizing: border-box;
+    margin-left: 200px; /* Larghezza della sidebar */
+    overflow-y: auto; /* Aggiungi la barra di scorrimento se necessario */
+}
+
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-bottom: 50px; /* Spazio tra gli elementi del menu */
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+    transition: all .5s;
+}
+
+nav ul li a:hover {
+    background: url('Pattern.png') repeat;
+    background-size: 100%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+nav.stroke ul li a,
+nav.fill ul li a {
+    position: relative;
+}
+
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #ffffff;
+    height: 3px;
+}
+
+nav.stroke ul li a:hover:after {
+    width: 50%;
+}
+
+nav.fill ul li a {
+    transition: all 2s;
+}
+
+nav.fill ul li a:after {
+    text-align: left;
+    content: '.';
+    margin: 0;
+    opacity: 0;
+}
+
+nav.fill ul li a:hover {
+    color: #007A94;
+    z-index: 1;
+}
+
+nav.fill ul li a:hover:after {
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+    opacity: 1;
+}
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#gallery img {
+    width: 48%; /* Larghezza delle immagini */
+    margin-bottom: 20px; /* Spazio tra le immagini */
+    object-fit: contain; /* Impedisce lo stretching delle immagini */
+}
