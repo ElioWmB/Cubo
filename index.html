@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Il tuo titolo</title>
+    <title>Cu bo'</title>
     <link rel="stylesheet" href="sitolo.css">
 </head>
 <body>
@@ -24,30 +24,38 @@
 </header>
 
 <section id="gallery">
-    <!-- Immagini verranno inserite dinamicamente qui -->
+    <div class="grid-wrapper">
+        <div class="tall">
+            <img src="images/image1.jpg" alt="" />
+        </div>
+        <div>
+            <img src="images/DSC_4296.jpg" />
+        </div>
+        <div class="tall">
+            <img src="images/DSC_4328.jpg" alt="" />
+        </div>
+        <div class="tall">
+            <img src="images/DSC_4330.jpg" alt="" />
+        </div>
+        <div class="wide">
+            <img src="images/image2.jpg" alt="" />
+        </div>
+        <div>
+            <img src="images/DSC_4314.jpg" alt="" />
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-image">
+            <img src="images/image5.jpg" alt="Il nostro menu">
+        </div>
+        <div class="card-content">
+            <h3>Il nostro menu</h3>
+            <p>Testo di esempio per il menu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod massa eget eros fermentum, vel eleifend ipsum fermentum.</p>
+            <button>Scopri di più</button>
+        </div>
+    </div>
 </section>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // Array delle immagini
-        const imagesArray = [
-            "image1.jpg",
-            "image5.jpg",
-            "image3.jpg",
-            "image4.jpg",
-            // Aggiungi altre immagini secondo necessità
-        ];
 
-        // Riferimento alla sezione della galleria
-        const gallerySection = document.getElementById("gallery");
-
-        // Popola dinamicamente la galleria con le immagini
-        imagesArray.forEach(image => {
-            const imgElement = document.createElement("img");
-            imgElement.src = "images/" + image; // Assicurati di avere una cartella "images" con le tue immagini
-            gallerySection.appendChild(imgElement);
-        });
-    });
-</script>
 </body>
 </html>
