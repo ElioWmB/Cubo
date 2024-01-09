@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La nostra storia</title>
-    <link rel="stylesheet" href="sitolo.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <a href="index.html">
+    <a class="logo" href="index.html">
         <img src="logo.svg" alt="Logo">
     </a>
     <nav class="stroke">
@@ -23,10 +23,26 @@
     <div class="divider"></div>
     <p class="motto">La qualità norvegese, il sapore della tradizione mediterranea</p>
     <div class="divider"></div>
+
+    <div class='navbar'> 
+        <div class='ikona'>
+            <div class='d'></div>
+            <div class='d'></div>
+            <div class='d'></div>
+        <div class='overlay' >
+            <div class='list'>
+                <li><a href="index.html">Home/a></li>
+                <li><a href="story.html">La nostra storia</a></li>
+                <li><a href="#">Prenota</a></li>
+            </div>
+        </div>
+        </div>
+    </div>
+    
 </header>
 
 <section id="ourStory">
-    <div class="story-image">
+    <div>
         <img src="images/image5.jpg" alt="La nostra storia">
     </div>
     <div class="scrollable-text">
@@ -49,6 +65,12 @@
     </div>
 </section>
 
+<script>
+    document.querySelector('.ikona').addEventListener('click', function() {
+        var navbarElement = document.querySelector('.navbar');
+        navbarElement.classList.toggle('anim');
+    });
+</script>
 
 </body>
 </html>

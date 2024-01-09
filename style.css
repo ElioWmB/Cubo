@@ -20,6 +20,10 @@ header {
     height: 100%;
 }
 
+.navbar{
+display: none;
+}
+
 .header-divider {
     height: 2px;
     background-color: #ffffff;
@@ -33,10 +37,14 @@ header {
     padding-top: 55%;
 }
 
-header img {
+header .logo img {
     max-width: 80%; /* Larghezza massima del logo */
     padding-top: 40%;
     padding-bottom: 50%;
+    max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+	display: inline-block;
 }
 
 section {
@@ -131,12 +139,7 @@ nav.fill ul li a:hover:after {
 }
 
 
-img {
-	max-width: 100%;
-	height: auto;
-	vertical-align: middle;
-	display: inline-block;
-}
+
 
 /* Main CSS */
 .grid-wrapper > div {
@@ -243,11 +246,11 @@ img {
 }
 
 .story-image {
-    position: relative;
     text-align: center;
+    z-index: 0;
 }
 
-.story-image img {
+img {
     width: 100%;
     height: 100vh;
     object-fit: cover;
@@ -357,11 +360,14 @@ img {
         text-align: left;
     }
     
-    header img {
-        max-height: 80%;
-        padding-top: 0%;
+    header .logo img {
+        max-height: 100%;
+        padding-top: 15px;
         padding-bottom: none;
         padding-left: 10px;
+        object-fit: contain;
+        max-width: 30%;
+        height: 100%;
     }
 
     section {
@@ -373,6 +379,19 @@ img {
         grid-gap: 5px;
         grid-auto-rows: 200px;
         grid-auto-flow: dense;
+    }
+    .navbar {
+        display: block; /* Mostra la navbar solo in modalità mobile */
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+        margin: 20px;
+    }
+    body {
+        /* Rimuovi o commenta la riga sottostante */
+        /* overflow-y: hidden; */
+        overflow-y: auto; /* Aggiungi questa riga per abilitare lo scrolling verticale */
     }
 }
 
@@ -405,39 +424,38 @@ a {
 	z-index: 1;
 	transition: 0.6s;
 	&:hover:nth-child(2) {
-		transform: translateX(2px);
+	transform: translateX(2px);
 	}
 }
 
 .overlay {
-	height: 100%;
-	width: 100%;
-	position: fixed;
-	z-index: -1;
-	top: 0; 
-	left: 0;
-	background-color: rgba(114,114,255,0.5);
-	overflow-x: hidden; 
-	opacity: 0;
-   transition: opacity 0.3s;
-	
-	a {
-		padding: 8px;
-		font-size: 36px;
-		display: block;
-	}
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 0; 
+    left: 0;
+    margin-top: 100px;
+    background-color:#007A94 ;
+    opacity: 0;
+    transition: opacity 1s, z-index 0s 0.3s; /* Delay the z-index change to after the opacity transition */
 }
+
+
 .list {
 	position: relative; 
 	top: 25%;
 	width: 100%;
-	margin-top: 30px;
+	margin-top: 100px;
 	text-align: center;
+    font-size: 36px;
+    line-height: 3;
+    list-style-type:none;
 }
-
 
 .anim .overlay {
 	opacity: 1;
+    z-index: 2;
 }
 
 .anim .d:nth-child(1) {
