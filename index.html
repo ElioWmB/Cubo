@@ -87,28 +87,31 @@
 </section>
 
 <script>
-    // Aggiungi un event listener per il click sui pulsanti "Scopri di più"
-    document.querySelectorAll('.card button').forEach(function(button) {
-    button.addEventListener('click', function() {
-        var link = this.querySelector('a').getAttribute('href');
-        window.location.href = link;
-    });
-});
-   // Aggiungi un event listener per il click sui pulsanti "Scopri di più"
-   document.querySelectorAll('.card.left button').forEach(function(button) {
-    button.addEventListener('click', function() {
-        var link = this.querySelector('a').getAttribute('href');
-        window.location.href = link;
-    });
-});
-
-    // Aggiungi l'event listener per il toggle della classe 'anim'
     document.querySelector('.ikona').addEventListener('click', function(event) {
-        // Verifica se l'elemento cliccato ha la classe 'd'
-        if (event.target.classList.contains('d')) {
-            var navbarElement = document.querySelector('.navbar');
-            navbarElement.classList.toggle('anim');
-        }
+        toggleNavbar();
+    });
+
+    document.querySelector('.ikona').addEventListener('touchstart', function(event) {
+        toggleNavbar();
+    });
+
+    function toggleNavbar() {
+        var navbarElement = document.querySelector('.navbar');
+        navbarElement.classList.toggle('anim');
+    }
+
+    document.querySelectorAll('.card button').forEach(function(button) {
+        button.addEventListener('click', function() {
+            var link = this.querySelector('a').getAttribute('href');
+            window.location.href = link;
+        });
+    });
+
+    document.querySelectorAll('.card.left button').forEach(function(button) {
+        button.addEventListener('click', function() {
+            var link = this.querySelector('a').getAttribute('href');
+            window.location.href = link;
+        });
     });
 </script>
 
