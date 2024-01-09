@@ -66,9 +66,12 @@
 </section>
 
 <script>
-    document.querySelector('.ikona').addEventListener('click', function() {
-        var navbarElement = document.querySelector('.navbar');
-        navbarElement.classList.toggle('anim');
+    document.querySelector('.ikona').addEventListener('click', function(event) {
+        // Verifica se l'elemento cliccato ha la classe 'd'
+        if (event.target.classList.contains('d')) {
+            var navbarElement = document.querySelector('.navbar');
+            navbarElement.classList.toggle('anim');
+        }
     });
 </script>
 
