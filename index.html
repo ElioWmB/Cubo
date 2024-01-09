@@ -94,6 +94,13 @@
         window.location.href = link;
     });
 });
+   // Aggiungi un event listener per il click sui pulsanti "Scopri di più"
+   document.querySelectorAll('.card.left button').forEach(function(button) {
+    button.addEventListener('click', function() {
+        var link = this.querySelector('a').getAttribute('href');
+        window.location.href = link;
+    });
+});
 
     // Aggiungi l'event listener per il toggle della classe 'anim'
     document.querySelector('.ikona').addEventListener('click', function(event) {
