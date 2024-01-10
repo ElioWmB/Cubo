@@ -433,16 +433,15 @@ a {
 
 .overlay {
     pointer-events: none;
-    height: 100%;
+    bottom: 0;
     width: 100%;
     position: fixed;
     z-index: 2;
-    top: 0; 
     left: 0;
-    margin-top: 100px;
+    top: 100px;
     background-color:#007A94 ;
     opacity: 0;
-    transition: opacity 1s, z-index 0s 0.3s; /* Delay the z-index change to after the opacity transition */
+    transition: opacity 1s;
 }
 
 
@@ -460,7 +459,6 @@ a {
 .anim .overlay {
     pointer-events: initial;
 	opacity: 1;
-    z-index: 2;
 }
 
 .anim .d:nth-child(1) {
