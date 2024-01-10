@@ -30,13 +30,13 @@
             <div class='d'></div>
             <div class='d'></div>
             <div class='d'></div>
-        <div class='overlay' >
+        </div>
+    <div class='overlay' >
             <div class='list'>
+                <li><a href="index.html">Home </a></li>
                 <li><a href="story.html">La nostra storia</a></li>
-                <li><a href="menu.html">menu</a></li>
                 <li><a href="#">Prenota</a></li>
             </div>
-        </div>
         </div>
     </div>
     
@@ -91,28 +91,10 @@
         toggleNavbar();
     });
 
-    document.querySelector('.ikona').addEventListener('touchstart', function(event) {
-        toggleNavbar();
-    });
-
     function toggleNavbar() {
         var navbarElement = document.querySelector('.navbar');
         navbarElement.classList.toggle('anim');
-    }
-
-    document.querySelectorAll('.card button').forEach(function(button) {
-        button.addEventListener('click', function() {
-            var link = this.querySelector('a').getAttribute('href');
-            window.location.href = link;
-        });
-    });
-
-    document.querySelectorAll('.card.left button').forEach(function(button) {
-        button.addEventListener('click', function() {
-            var link = this.querySelector('a').getAttribute('href');
-            window.location.href = link;
-        });
-    });
+    };
 </script>
 
 

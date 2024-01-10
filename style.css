@@ -284,12 +284,14 @@ img {
     color: #007A94;
     line-height: 1.6;
     padding-bottom: 70px;
+    object-fit: cover;
 }
 
 .scrollable-text img {
     text-align: center;
-    padding-bottom: 30px;
     display: flex;
+    object-fit: contain;
+    height: 30vh;
 }
 
 .menu {
@@ -430,6 +432,7 @@ a {
 }
 
 .overlay {
+    pointer-events: none;
     height: 100%;
     width: 100%;
     position: fixed;
@@ -455,6 +458,7 @@ a {
 }
 
 .anim .overlay {
+    pointer-events: initial;
 	opacity: 1;
     z-index: 2;
 }
