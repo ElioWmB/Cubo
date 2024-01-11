@@ -456,7 +456,7 @@ a {
     list-style-type:none;
 }
 
-.anim .overlay {
+.overlay.anim {
     pointer-events: initial;
 	opacity: 1;
 }

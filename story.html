@@ -51,14 +51,18 @@
 </section>
 
 <script>
-    document.querySelector('.ikona').addEventListener('click', function(event) {
+    document.querySelector('.ikona').addEventListener('click', function (event) {
         toggleNavbar();
     });
+    console.log(document.querySelector('.ikona'))
 
     function toggleNavbar() {
         var navbarElement = document.querySelector('.navbar');
+        var overlayElement = document.querySelector('.overlay');
         navbarElement.classList.toggle('anim');
+        overlayElement.classList.toggle('anim');
     };
 </script>
+
 </body>
 </html>

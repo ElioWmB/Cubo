@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>La nostra storia</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
@@ -24,22 +26,23 @@
     <p class="motto">La qualità norvegese, il sapore della tradizione mediterranea</p>
     <div class="divider"></div>
 
-    <div class='navbar'> 
+    <div class='navbar'>
         <div class='ikona'>
             <div class='d'></div>
             <div class='d'></div>
             <div class='d'></div>
         </div>
+    </div>
+
 </header>
-<div class='overlay' >
+
+<div class='overlay'>
     <div class='list'>
         <li><a href="index.html">Home </a></li>
         <li><a href="story.html">La nostra storia</a></li>
         <li><a href="#">Prenota</a></li>
     </div>
 </div>
-</div>
-
 
 <section id="ourStory">
     <div>
@@ -51,7 +54,7 @@
         <img src="cuopperia.svg" alt="">
     </div>
     <div class="menu">
-        <h3>Cubo Originale</h>
+        <h3>Cubo Originale</h3>
         <h2>5,00€</h2>
         <h3>Cubo Classico</h3>
         <h2>5,00€</h2>
@@ -66,14 +69,16 @@
 </section>
 
 <script>
-    document.querySelector('.ikona').addEventListener('click', function(event) {
+    document.querySelector('.ikona').addEventListener('click', function (event) {
         toggleNavbar();
     });
     console.log(document.querySelector('.ikona'))
 
     function toggleNavbar() {
         var navbarElement = document.querySelector('.navbar');
+        var overlayElement = document.querySelector('.overlay');
         navbarElement.classList.toggle('anim');
+        overlayElement.classList.toggle('anim');
     };
 </script>
 
