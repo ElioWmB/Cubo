@@ -15,14 +15,13 @@
     </a>
     <nav class="stroke">
         <ul>
+            <li><a href="index.html">home</a></li>
             <li><a href="story.html">La nostra storia</a></li>
             <li><a href="menu.html">Menu</a></li>
             <li><a href="contacts.html">Contatti</a></li>
         </ul>
     </nav>
-    <div class="divider"></div>
     <p class="motto">La qualità norvegese, il sapore della tradizione mediterranea</p>
-    <div class="divider"></div>
     <p class="powered">powered by <br> gruppo Acta</p>
     <div class='navbar'> 
         <div class='ikona'>
@@ -36,6 +35,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="menu.html">Menu</a></li>
         <li><a href="contacts.html">Contatti</a></li>
+        <p class="powered">powered by <br> gruppo Acta</p>
     </div>
 </div>
 </div>
@@ -56,10 +56,12 @@
     });
 
     function toggleNavbar() {
+        var bodyElement = document.body;
         var navbarElement = document.querySelector('.navbar');
         var overlayElement = document.querySelector('.overlay');
         navbarElement.classList.toggle('anim');
         overlayElement.classList.toggle('anim');
+        bodyElement.classList.toggle('no-scroll');
     };
 </script>
 

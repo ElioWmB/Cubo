@@ -16,14 +16,13 @@
     </a>
     <nav class="stroke">
         <ul>
+            <li><a href="index.html">Home</a></li>
             <li><a href="story.html">La nostra storia</a></li>
             <li><a href="menu.html">Menu</a></li>
             <li><a href="contacts.html">Contatti</a></li>
         </ul>
     </nav>
-    <div class="divider"></div>
     <p class="motto">La qualità norvegese, il sapore della tradizione mediterranea</p>
-    <div class="divider"></div>
     <p class="powered">powered by <br> gruppo Acta</p>
     <div class='navbar'> 
         <div class='ikona'>
@@ -38,6 +37,7 @@
         <li><a href="story.html">La nostra storia</a></li>
         <li><a href="menu.html">Menu</a></li>
         <li><a href="contacts.html">Contatti</a></li>
+        <p class="powered">powered by <br> gruppo Acta</p>
     </div>
 </div>
 </div>
@@ -69,7 +69,7 @@
         </div>
         <div class="card-content">
             <h3>Il nostro menu</h3>
-            <p>Testo di esempio per il menu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod massa eget eros fermentum, vel eleifend ipsum fermentum.</p>
+            <p></p>
             <button><a href="menu.html">Scopri di più</a></button>
         </div>
     </div>
@@ -79,7 +79,7 @@
         </div>
         <div class="card-content">
             <h3>La nostra storia</h3>
-            <p>Testo di esempio per il menu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod massa eget eros fermentum, vel eleifend ipsum fermentum.</p>
+            <p></p>
             <button><a href="story.html">Scopri di più</a></button>
         </div>
     </div>
@@ -92,10 +92,12 @@
     });
 
     function toggleNavbar() {
+        var bodyElement = document.body;
         var navbarElement = document.querySelector('.navbar');
         var overlayElement = document.querySelector('.overlay');
         navbarElement.classList.toggle('anim');
         overlayElement.classList.toggle('anim');
+        bodyElement.classList.toggle('no-scroll');
     };
 </script>
 

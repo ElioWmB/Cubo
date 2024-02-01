@@ -15,14 +15,13 @@
     </a>
     <nav class="stroke">
         <ul>
+            <li><a href="index.html">Home</a></li>
             <li><a href="story.html">La nostra storia</a></li>
             <li><a href="menu.html">Menu</a></li>
             <li><a href="contacts.html">Contatti</a></li>
         </ul>
     </nav>
-    <div class="divider"></div>
     <p class="motto">La qualità norvegese, il sapore della tradizione mediterranea</p>
-    <div class="divider"></div>
     <p class="powered">powered by <br> gruppo Acta</p>
     <div class='navbar'> 
         <div class='ikona'>
@@ -36,8 +35,8 @@
         <li><a href="index.html">Home </a></li>
         <li><a href="story.html">La nostra storia</a></li>
         <li><a href="menu.html">Menu</a></li>
+        <p class="powered">powered by <br> gruppo Acta</p>
     </div>
-    <p class="powered">powered by <br> gruppo Acta</p>
 </div>
 </div>
 
@@ -47,13 +46,13 @@
     </div>
     <div class="scrollable-text">
         <h2>Contattaci</h2>
-        <p>Testo della nostra storia che appare quando scrolli... Testo della nostra storia che appare quando scrolli... Testo della nostra storia che appare quando scrolli... Testo della nostra storia che appare quando scrolli... Testo della nostra storia che appare quando scrolli...</p>
     </div>
     <div class="menu">
         <h3>numero di telefono</h3>
         <h2>081 1975 8379</h2>
         <h3>email</h3>
-        <h2>cu.botteghe48@gmail.com</h2>
+        <h4>cu.botteghe48@gmail.com</h4>
+
     </div>
     <div class="scrollable-text">
         <h2>Vieni a trovarci a Via botteghe 48, 80049 Somma Vesuviana NA</h2>
@@ -67,10 +66,12 @@
     });
 
     function toggleNavbar() {
+        var bodyElement = document.body;
         var navbarElement = document.querySelector('.navbar');
         var overlayElement = document.querySelector('.overlay');
         navbarElement.classList.toggle('anim');
         overlayElement.classList.toggle('anim');
+        bodyElement.classList.toggle('no-scroll');
     };
 </script>
 
